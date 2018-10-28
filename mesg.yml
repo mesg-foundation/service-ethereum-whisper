@@ -1,0 +1,43 @@
+name: "Ethereum Whisper"
+description: "Ethereum Whisper Service"
+dependencies:
+  geth:
+    image: ethereum/client-go:v1.8.17
+    command: "--shh -ws --wsaddr 0.0.0.0 --wsorigins * --syncmode light"
+    ports:
+      - "30303"
+      - "8545"
+tasks:
+  post:
+    inputs:
+      payload:
+        type: String
+      topic:
+        type: String
+        optional: true
+    outputs:
+      success:
+        data:
+          hash:
+            type: String
+      error:
+        data:
+          message:
+            type: String
+events:
+  message:
+    data:
+      ttl:
+        type: Number
+      timestamp:
+        type: Number
+      topic:
+        type: String
+      payload:
+        type: String
+      padding:
+        type: String
+      pow:
+        type: Number
+      hash:
+        type: String

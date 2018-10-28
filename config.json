@@ -1,0 +1,7 @@
+{
+  "endpoint": "ws://geth:8546",
+  "topic": "0xffaadd11",
+  "ttl": 10,
+  "powTime": 3,
+  "powTarget": 0.5
+}
