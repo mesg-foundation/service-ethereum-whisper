@@ -1,5 +1,12 @@
 name: "Ethereum Whisper"
 description: "Ethereum Whisper Service"
+configuration:
+  env:
+    - ENDPOINT=ws://geth:8546
+    - TOPIC=0xffaadd11
+    - TTL=10
+    - POW_TIME=3
+    - POW_TARGET=0.5
 dependencies:
   geth:
     image: ethereum/client-go:v1.8.17

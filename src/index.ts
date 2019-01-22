@@ -1,12 +1,17 @@
 import { service as MESG } from "mesg-js"
 import Web3 from "web3"
-import config from "../config.json"
 import messageEvent from "./events/message"
 import post from "./tasks/post"
 
+const endpoint = process.env.ENDPOINT
+const topic = process.env.TOPIC
+const ttl = parseInt(<string>process.env.TTL, 10)
+const powTime = parseInt(<string>process.env.POW_TIME, 10)
+const powTarget = parseFloat(<string>process.env.POW_TARGET)
+
 const main = async () => {
   const mesg = MESG()
-  const web3: any = new Web3(config.endpoint)
+  const web3: any = new Web3(endpoint)
 
   const symKeyID: string = await web3.shh.newSymKey()
   // console.log('symKeyID', symKeyID)
