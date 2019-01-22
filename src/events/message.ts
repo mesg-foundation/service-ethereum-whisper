@@ -1,4 +1,4 @@
-import Service from "mesg-js/lib/service"
+import Service from "mesg-js/lib/service/service"
 import config from "../../config.json"
 
 export = async (mesg: Service, web3: any, symKeyID: string) => {
