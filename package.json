@@ -8,7 +8,7 @@
     "@types/web3": "^1.0.14",
     "mesg-js": "^2.0.0",
     "ts-node": "^7.0.1",
-    "typescript": "^3.2.4",
+    "typescript": "^3.5.1",
     "web3": "^1.0.0-beta.37"
   },
   "devDependencies": {
